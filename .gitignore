@@ -1,0 +1,8 @@
+output_audio/
+samples/
+stylegan3/
+*.pkl
+.DS_Store
+*.wav
+*.mp3
+*.mp4

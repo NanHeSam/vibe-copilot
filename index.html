@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Image Display</title>
+    <script>
+        function refreshImage() {
+            // Assumes some way (e.g., server-side scripting) to get the latest image URL
+            const imageUrl = "http://127.0.0.1:5000";  // replace with your logic or method to get the latest image
+            document.getElementById("latestImage").src = imageUrl + "?timestamp=" + new Date().getTime();  // Append timestamp to prevent caching
+            setTimeout(refreshImage, 500);  // Refreshes the image every 0.1 seconds
+        }
+    </script>
+</head>
+<body onload="refreshImage()">
+    <img id="latestImage" src="" alt="Latest Image" width="500">  <!-- Set width as required -->
+</body>
+</html>
